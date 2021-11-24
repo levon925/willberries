@@ -38,8 +38,8 @@ const getGoods = () => {
             localStorage.setItem('goods', JSON.stringify(array))
 
             
-            if(window.location.pathname !== "/goods.html"){
-                window.location.href = '/goods.html'
+            if(window.location.pathname !== "/willberries/goods.html"){
+                window.location.href = '/willberries/goods.html'
             } else{
                 renderGoods(array)
             }
@@ -54,7 +54,7 @@ const getGoods = () => {
             getData(linkValue, category)
         })
     })
-    if(localStorage.getItem('goods')&& window.location.pathname === "/goods.html"){
+    if(localStorage.getItem('goods')&& window.location.pathname === "willberries/goods.html"){
         renderGoods(JSON.parse(localStorage.getItem('goods')))
     }
 
